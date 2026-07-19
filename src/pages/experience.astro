@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+
+const title = "Experience — Aditya Sharma | Software Engineer";
+const description = "Detailed work experience: Microsoft, GitHub Copilot CLI, SellStatic, McMaster University. Every role, every accomplishment.";
+
+const experience = [
+  {
+    company: "GitHub",
+    role: "Software Engineer, Copilot CLI",
+    period: "Jun 2026 – Present",
+    location: "Seattle, WA",
+    type: "Dual-Access Employee",
+    bullets: [
+      "Selected to contribute open source to GitHub Copilot CLI as a Microsoft Dual-Access Employee",
+      "Contributing to developer tooling used by millions of developers worldwide",
+    ],
+  },
+  {
+    company: "Microsoft",
+    role: "Software Engineer, AI & Infrastructure",
+    period: "Aug 2025 – Present",
+    location: "Seattle, WA",
+    bullets: [
+      "Developed an agent eval framework that reduced error diagnosis time by 4x per test, adopted by 5 business teams, caught 3 P0 bugs",
+      "Created an internal testing agent running as a standalone validation service with 99.99% uptime",
+      "Reduced E2E test runtimes from 8hrs to 1hr, improving productivity for 15 engineers",
+      "Authored a 120+ automated-test suite for the distributed systems data Import API; reduced uncaught regressions from 17 to 3",
+    ],
+  },
+  {
+    company: "Microsoft",
+    role: "Software Engineer, Full-Stack",
+    period: "Aug 2022 – Aug 2025",
+    location: "Seattle, WA",
+    bullets: [
+      "Led front-end engineering for Slack-to-Teams migration: shipped 80% of features, 16M+ messages migrated, 100K+ enterprise tenants, $324M+ ARR pipeline",
+      "Built push notification system: <1s latency, 1M+ daily events, 30K+ peak surges, 10K+ monthly developers using public docs",
+      "Shipped 4 RESTful Messaging APIs handling 33M+ daily requests each (CodeBlock, ReplyWithQuote, Delta Token V2)",
+      "Built Geneva & Grafana monitoring dashboards, identified Sev 2 risks 3 weeks in advance",
+    ],
+  },
+  {
+    company: "SellStatic",
+    role: "Co-Founder & AI Engineer",
+    period: "Dec 2022 – Jan 2026",
+    location: "Toronto, ON (Side Venture)",
+    bullets: [
+      "Grew to $1K+ MRR, 1.2K-user waitlist, 75 customer interviews, 14-person team, 5 GenAI features shipped",
+      "Improved retention by 37%, reduced COGS by 43% with in-house AI media editor",
+      "Shipped AI image/video generation across 5 AI models and 5 social platforms with OCR-based evaluation guardrails",
+      "Built RAG chatbot: 22% better onboarding, 80% fewer support reachouts (vector search, BM25, RRF fusion, reranking)",
+    ],
+  },
+];
+
+const education = {
+  school: "McMaster University",
+  degree: "B.Eng in Software & Biomedical Engineering",
+  period: "Sep 2018 – May 2022",
+  gpa: "3.7 / 4.0",
+  details: [
+    "42 months additional experience: 28 months SWE internships (Microsoft, Konrad Group, CIBC, Loblaw, Kinaxis) + 14 months as Software Dev, Research Assistant, and Teaching Assistant",
+  ],
+};
+
+const techStack = {
+  "Languages": "Python, C#, Java, TypeScript, JavaScript, Go, C/C++, SQL, HTML/CSS, Bash",
+  "Frameworks": "React, .NET, Flask, Django, FastAPI, Node.js, Express, LangChain, LangGraph, M365 Agents SDK",
+  "Cloud & Infra": "Azure (Functions, DevOps, App Service, Entra), AWS, GCP, Docker, Kubernetes",
+  "Data": "Cosmos DB, PostgreSQL, Redis, MongoDB, Azure Data Explorer (Kusto/KQL)",
+  "Tools": "Git, CI/CD, Terraform, Grafana, Geneva Monitoring",
+};
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="py-8">
+    <div class="flex items-center justify-between mb-8">
+      <div>
+        <h1 class="text-3xl font-bold">Experience</h1>
+        <p class="text-text-muted mt-1">Everything I've built, every role I've held.</p>
+      </div>
+      <a
+        href="/AdityaSharma_Resume.pdf"
+        download
+        class="hidden sm:inline-flex items-center px-4 py-2 bg-brand text-white text-sm font-medium rounded-lg hover:bg-brand-dark transition-colors"
+      >
+        Download PDF
+      </a>
+    </div>
+
+    <!-- Work Experience -->
+    <div class="space-y-10">
+      {experience.map((job) => (
+        <article class="relative pl-6 border-l-2 border-border">
+          <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-brand border-2 border-white"></div>
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
+            <h2 class="text-lg font-semibold">{job.company} — {job.role}</h2>
+            {job.type && <span class="text-xs px-2 py-0.5 bg-blue-50 text-brand rounded-full font-medium">{job.type}</span>}
+          </div>
+          <p class="text-sm text-text-muted mb-3">{job.period} · {job.location}</p>
+          <ul class="space-y-2">
+            {job.bullets.map((b) => (
+              <li class="text-sm text-text/80 leading-relaxed flex">
+                <span class="text-brand mr-2 mt-1 shrink-0">•</span>
+                <span>{b}</span>
+              </li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </div>
+
+    <!-- Education -->
+    <div class="mt-16 pt-12 border-t border-border">
+      <h2 class="text-2xl font-semibold mb-6">Education</h2>
+      <article class="relative pl-6 border-l-2 border-border">
+        <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-brand border-2 border-white"></div>
+        <h3 class="text-lg font-semibold">{education.school}</h3>
+        <p class="text-sm text-text-muted">{education.degree} · GPA: {education.gpa}</p>
+        <p class="text-sm text-text-muted mb-3">{education.period}</p>
+        <ul class="space-y-2">
+          {education.details.map((d) => (
+            <li class="text-sm text-text/80 leading-relaxed flex">
+              <span class="text-brand mr-2 mt-1 shrink-0">•</span>
+              <span>{d}</span>
+            </li>
+          ))}
+        </ul>
+      </article>
+    </div>
+
+    <!-- Tech Stack -->
+    <div class="mt-16 pt-12 border-t border-border">
+      <h2 class="text-2xl font-semibold mb-6">Technical Skills</h2>
+      <div class="space-y-4">
+        {Object.entries(techStack).map(([category, skills]) => (
+          <div>
+            <h3 class="text-sm font-semibold text-text mb-1">{category}</h3>
+            <p class="text-sm text-text-muted">{skills}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

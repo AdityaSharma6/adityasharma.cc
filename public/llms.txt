@@ -1,0 +1,41 @@
+# Aditya Sharma — Personal Site
+
+> Software Engineer at Microsoft & open-source contributor to GitHub Copilot CLI.
+> I build high-scale APIs, AI agents, and products that ship.
+
+## About
+
+Aditya Sharma is a Software Engineer at Microsoft and an open-source contributor to GitHub Copilot CLI. He studied Software & Biomedical Engineering at McMaster University (3.7 GPA) and has shipped APIs handling 33M+ daily requests, AI agent evaluation infrastructure adopted by 5+ teams, and co-founded SellStatic (AI content platform, $1K+ MRR).
+
+## Links
+
+- Homepage: https://adityasharma.cc
+- Resume: https://adityasharma.cc/resume/
+- Experience: https://adityasharma.cc/experience/
+- Contact: https://adityasharma.cc/contact/
+- LinkedIn: https://www.linkedin.com/in/adityasharma6/
+- GitHub: https://github.com/AdityaSharma6
+- Email: aditya_sharma_@hotmail.com
+
+## Experience
+
+### GitHub — Software Engineer, Copilot CLI (Jun 2026 – Present)
+Selected as a Dual-Access Employee to contribute open source to GitHub Copilot CLI. Building developer tools used by millions.
+
+### Microsoft — Software Engineer, AI & Infrastructure (Aug 2025 – Present)
+Agent eval framework (4x faster diagnosis, 5 teams, 3 P0 bugs caught). Testing agent with 99.99% uptime. E2E test runtime: 8hrs → 1hr. 120+ automated tests for Import API.
+
+### Microsoft — Software Engineer, Full-Stack (Aug 2022 – Aug 2025)
+Slack-to-Teams migration (80% of features, 16M+ messages, 100K+ tenants, $324M+ ARR). Push notifications (<1s latency, 1M+ daily events). 4 Messaging APIs at 33M+ daily requests each.
+
+### SellStatic — Co-Founder & AI Engineer (Dec 2022 – Jan 2026)
+$1K+ MRR, 1.2K waitlist, 14-person team. AI image/video gen across 5 models. RAG chatbot (80% fewer support tickets).
+
+## Education
+
+McMaster University — B.Eng Software & Biomedical Engineering (GPA: 3.7/4.0)
+42 months co-op: Microsoft, Konrad Group, CIBC, Loblaw, Kinaxis
+
+## Skills
+
+Python, C#, TypeScript, Java, Go, React, .NET, FastAPI, Node.js, LangChain, LangGraph, Azure, AWS, GCP, Cosmos DB, PostgreSQL, Redis, Docker, Kubernetes

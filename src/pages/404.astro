@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+
+const title = "Page Not Found — Aditya Sharma";
+const description = "The page you're looking for doesn't exist.";
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="py-24 text-center">
+    <h1 class="text-6xl font-bold text-text mb-4">404</h1>
+    <p class="text-text-muted mb-8">The page you're looking for doesn't exist.</p>
+    <a href="/" class="inline-flex items-center px-5 py-2.5 bg-brand text-white text-sm font-medium rounded-lg hover:bg-brand-dark transition-colors">
+      Go Home
+    </a>
+  </section>
+</BaseLayout>

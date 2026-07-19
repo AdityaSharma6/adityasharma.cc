@@ -1,0 +1,5 @@
+# https://adityasharma.cc/robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://adityasharma.cc/sitemap-index.xml

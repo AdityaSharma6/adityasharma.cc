@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+
+const title = "Resume — Aditya Sharma";
+const description = "Download or view Aditya Sharma's software engineering resume. Microsoft, GitHub, AI, full-stack.";
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="py-8">
+    <h1 class="text-3xl font-bold mb-4">Resume</h1>
+    <p class="text-text-muted mb-8">
+      View my resume below or download the PDF directly.
+    </p>
+
+    <div class="flex gap-3 mb-10">
+      <a
+        href="/AdityaSharma_Resume.pdf"
+        download
+        class="inline-flex items-center px-5 py-2.5 bg-brand text-white text-sm font-medium rounded-lg hover:bg-brand-dark transition-colors"
+      >
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+        Download PDF
+      </a>
+      <a
+        href="/experience/"
+        class="inline-flex items-center px-5 py-2.5 border border-border text-sm font-medium rounded-lg hover:bg-surface transition-colors"
+      >
+        View Detailed Experience
+      </a>
+    </div>
+
+    <!-- Embedded PDF Viewer -->
+    <div class="border border-border rounded-xl overflow-hidden">
+      <iframe
+        src="/AdityaSharma_Resume.pdf"
+        class="w-full h-[80vh]"
+        title="Aditya Sharma Resume"
+      ></iframe>
+    </div>
+
+    <p class="mt-4 text-sm text-text-muted">
+      Having trouble viewing? <a href="/AdityaSharma_Resume.pdf" download class="text-brand hover:underline">Download the PDF</a> instead.
+    </p>
+  </section>
+</BaseLayout>

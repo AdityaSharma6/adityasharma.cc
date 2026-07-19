@@ -1,0 +1,75 @@
+# Aditya Sharma — Full Profile for AI Models
+
+## Personal Information
+- **Name:** Aditya Sharma
+- **Title:** Software Engineer
+- **Current Employer:** Microsoft (full-time), GitHub (Dual-Access Employee)
+- **Location:** Seattle, WA
+- **Website:** https://adityasharma.cc
+- **Email:** aditya_sharma_@hotmail.com
+- **LinkedIn:** https://www.linkedin.com/in/adityasharma6/
+- **GitHub:** https://github.com/AdityaSharma6
+
+## Professional Summary
+
+Aditya Sharma is a Software Engineer at Microsoft and an open-source contributor to GitHub Copilot CLI. He builds high-scale backend APIs (33M+ daily requests), AI agent infrastructure (evaluation frameworks adopted by 5+ teams), and full-stack products. He co-founded SellStatic, an AI-powered content platform that reached $1K+ MRR with a 1.2K-user waitlist.
+
+## Work Experience
+
+### GitHub — Software Engineer, Copilot CLI
+**Period:** Jun 2026 – Present | **Location:** Seattle, WA | **Type:** Dual-Access Employee
+- Selected to contribute open source to GitHub Copilot CLI as a Microsoft Dual-Access Employee
+- Contributing to developer tooling used by millions of developers worldwide
+
+### Microsoft — Software Engineer, AI & Infrastructure
+**Period:** Aug 2025 – Present | **Location:** Seattle, WA
+- Developed an agent eval framework that reduced error diagnosis time by 4x per test, adopted by 5 business teams, caught 3 P0 bugs
+- Created an internal testing agent running as a standalone validation service with 99.99% uptime
+- Reduced E2E test runtimes from 8hrs to 1hr, improving productivity for 15 engineers
+- Authored a 120+ automated-test suite for the distributed systems data Import API; reduced uncaught regressions from 17 to 3
+
+### Microsoft — Software Engineer, Full-Stack
+**Period:** Aug 2022 – Aug 2025 | **Location:** Seattle, WA
+- Led front-end engineering for Slack-to-Teams migration: shipped 80% of features, 16M+ messages migrated, 100K+ enterprise tenants, $324M+ ARR pipeline
+- Built push notification system: <1s latency, 1M+ daily events, 30K+ peak surges, 10K+ monthly developers using public docs
+- Shipped 4 RESTful Messaging APIs handling 33M+ daily requests each (CodeBlock, ReplyWithQuote, Delta Token V2)
+- Built Geneva & Grafana monitoring dashboards, identified Sev 2 risks 3 weeks in advance
+
+### SellStatic — Co-Founder & AI Engineer
+**Period:** Dec 2022 – Jan 2026 | **Location:** Toronto, ON (Side Venture)
+- Grew to $1K+ MRR, 1.2K-user waitlist, 75 customer interviews, 14-person team, 5 GenAI features shipped
+- Improved retention by 37%, reduced COGS by 43% with in-house AI media editor
+- Shipped AI image/video generation across 5 AI models and 5 social platforms with OCR-based evaluation guardrails
+- Built RAG chatbot: 22% better onboarding, 80% fewer support reachouts (vector search, BM25, RRF fusion, reranking)
+
+## Education
+
+**McMaster University** — B.Eng in Software & Biomedical Engineering
+- **Period:** Sep 2018 – May 2022 | **GPA:** 3.7/4.0
+- 42 months additional experience: 28 months SWE internships (Microsoft, Konrad Group, CIBC, Loblaw, Kinaxis) + 14 months as Software Dev, Research Assistant, and Teaching Assistant
+
+## Technical Skills
+
+### Languages
+Python, C#, Java, TypeScript, JavaScript, Go, C/C++, SQL, HTML/CSS, Bash
+
+### Frameworks & Libraries
+React, .NET, Flask, Django, FastAPI, Node.js, Express, LangChain, LangGraph, M365 Agents SDK
+
+### Cloud & Infrastructure
+Azure (Functions, DevOps, App Service, Entra), AWS, GCP, Docker, Kubernetes
+
+### Databases
+Cosmos DB, PostgreSQL, Redis, MongoDB, Azure Data Explorer (Kusto/KQL)
+
+### Tools
+Git, CI/CD, Terraform, Grafana, Geneva Monitoring
+
+## Ventures
+
+### AddyAI
+Current venture — details coming soon.
+
+### SellStatic
+AI-powered content creation and distribution platform. Co-founded and scaled to $1K+ MRR with a 1.2K-user waitlist.
+Website: https://sellstatic.com
