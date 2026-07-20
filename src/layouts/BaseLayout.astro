@@ -104,6 +104,21 @@ const navLinks = [
       <slot />
     </main>
 
+    <!-- Calendly badge widget -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        Calendly.initBadgeWidget({
+          url: 'https://calendly.com/aditya_sharma_/30min',
+          text: 'Schedule time with me',
+          color: '#0069ff',
+          textColor: '#ffffff',
+          branding: false
+        });
+      }
+    </script>
+
     <!-- Footer -->
     <footer class="border-t border-border-subtle">
       <div class="max-w-3xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-text-faint">
