@@ -8,7 +8,18 @@ const description = "Software Engineer at Microsoft. Open-source contributor to 
 
 <BaseLayout title={title} description={description}>
   <section class="animate-in max-w-xl">
-    <h1 class="text-2xl font-semibold tracking-tight mb-6">Hey! I'm Aditya 👋</h1>
+    <!-- Profile photo + heading -->
+    <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5 mb-8">
+      <img
+        src="/aditya-hiking.jpg"
+        alt="Aditya Sharma hiking"
+        class="w-28 h-28 rounded-full object-cover object-top border-2 border-border-subtle shadow-sm shrink-0"
+      />
+      <div class="text-center sm:text-left">
+        <h1 class="text-2xl font-semibold tracking-tight">Hey! I'm Aditya 👋</h1>
+        <p class="text-sm text-text-muted mt-1">Software Engineer · Seattle, WA · Originally from Toronto</p>
+      </div>
+    </div>
 
     <div class="space-y-4 text-[15px] text-text-muted leading-relaxed">
       <p>
@@ -34,6 +45,12 @@ const description = "Software Engineer at Microsoft. Open-source contributor to 
       <p>
         If anybody would like to chat or try to beat me in a sushi eating competition, feel free to <a href="/contact/" class="text-text underline decoration-border underline-offset-3 hover:decoration-text-muted transition-colors">reach out</a> anytime!
       </p>
+    </div>
+
+    <!-- Photo gallery -->
+    <div class="flex items-center gap-4 mt-8">
+      <img src="/aditya-garden.jpg" alt="Aditya in a garden" class="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover object-top border border-border-subtle shadow-sm" />
+      <img src="/aditya-jacket.jpg" alt="Aditya in a leather jacket" class="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover object-top border border-border-subtle shadow-sm" />
     </div>
   </section>
 

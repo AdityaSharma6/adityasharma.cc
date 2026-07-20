@@ -81,12 +81,12 @@ const navLinks = [
         <a href="/" class="text-sm font-semibold tracking-tight hover:opacity-70 transition-opacity">
           AS
         </a>
-        <div class="flex items-center gap-1">
+        <div class="flex items-center gap-0.5 sm:gap-1 flex-wrap">
           {navLinks.map((link) => (
             <a
               href={link.href}
               class:list={[
-                "px-3 py-1.5 text-sm rounded-md transition-all",
+                "px-2 sm:px-3 py-1.5 text-xs sm:text-sm rounded-md transition-all",
                 currentPath === link.href
                   ? "bg-surface text-text font-medium"
                   : "text-text-muted hover:text-text hover:bg-surface"
@@ -100,7 +100,7 @@ const navLinks = [
     </nav>
 
     <!-- Main Content -->
-    <main class="flex-1 max-w-3xl mx-auto w-full px-6 py-16">
+    <main class="flex-1 max-w-3xl mx-auto w-full px-4 sm:px-6 py-10 sm:py-16">
       <slot />
     </main>
 
