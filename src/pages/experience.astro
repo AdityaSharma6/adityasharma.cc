@@ -8,28 +8,31 @@ const description = "Detailed work experience with links to shipped work. Micros
 
 <BaseLayout title={title} description={description}>
   <section class="animate-in">
-    <h1 class="text-2xl font-semibold tracking-tight mb-2">Experience</h1>
-    <p class="text-sm text-text-muted mb-4">Everything I've built - with links to the actual work.</p>
+    <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+      <div>
+        <h1 class="text-2xl font-semibold tracking-tight mb-2">Experience</h1>
+        <p class="text-sm text-text-muted mb-4">Everything I've built - with links to the actual work.</p>
+        <a
+          href="/AdityaSharma_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-xs text-text-faint hover:text-text-muted underline underline-offset-3 transition-colors"
+        >
+          Download PDF ↗
+        </a>
+      </div>
 
-    <!-- Company logo strip -->
-    <div class="flex items-center gap-4 flex-wrap mb-4">
-      <img src="/logos/github.png" alt="GitHub" class="h-10 w-auto" />
-      <img src="/logos/microsoft.png" alt="Microsoft" class="h-10 w-auto" />
-      <img src="/logos/sellstatic.png" alt="SellStatic" class="h-10 w-auto object-contain" />
-      <img src="/logos/cibc.png" alt="CIBC" class="h-10 w-auto" />
-      <img src="/logos/loblaws.png" alt="Loblaw" class="h-10 w-auto" />
-      <img src="/logos/kinaxis.png" alt="Kinaxis" class="h-10 w-auto" />
-      <img src="/logos/konrad.png" alt="Konrad Group" class="h-10 w-auto" />
+      <!-- Company logo strip - right side -->
+      <div class="flex items-center gap-3 flex-wrap lg:max-w-xs">
+        <img src="/logos/github.png" alt="GitHub" class="h-7 w-auto" />
+        <img src="/logos/microsoft.png" alt="Microsoft" class="h-7 w-auto" />
+        <img src="/logos/sellstatic.png" alt="SellStatic" class="h-7 w-auto object-contain" />
+        <img src="/logos/cibc.png" alt="CIBC" class="h-7 w-auto" />
+        <img src="/logos/loblaws.png" alt="Loblaw" class="h-7 w-auto" />
+        <img src="/logos/kinaxis.png" alt="Kinaxis" class="h-7 w-auto" />
+        <img src="/logos/konrad.png" alt="Konrad Group" class="h-7 w-auto" />
+      </div>
     </div>
-
-    <a
-      href="/AdityaSharma_Resume.pdf"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="text-xs text-text-faint hover:text-text-muted underline underline-offset-3 transition-colors"
-    >
-      Download PDF ↗
-    </a>
   </section>
 
   <!-- GitHub -->
