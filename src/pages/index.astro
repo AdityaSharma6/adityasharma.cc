@@ -7,23 +7,24 @@ const description = "Software Engineer at Microsoft. Open-source contributor to 
 ---
 
 <BaseLayout title={title} description={description}>
-  <div class="animate-in grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-12">
+  <div class="animate-in grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-8 lg:gap-16">
     <!-- Left column: Bio -->
     <section>
       <!-- Profile photo + heading -->
-      <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-8">
+      <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-10">
         <img
           src="/aditya-hiking.jpg"
           alt="Aditya Sharma hiking"
           class="w-60 h-60 rounded-full object-cover object-top border-2 border-border-subtle shadow-sm shrink-0"
         />
-        <div class="text-center sm:text-left pt-2">
-          <h1 class="text-2xl font-semibold tracking-tight">Hey! I'm Aditya 👋</h1>
-          <p class="text-sm text-text-muted mt-1">Software Engineer · Seattle, WA · Originally from Toronto</p>
+        <div class="text-center sm:text-left pt-4">
+          <h1 class="text-3xl font-semibold tracking-tight">Hey! I'm Aditya 👋</h1>
+          <p class="text-base text-text-muted mt-2">Software Engineer · Seattle, WA · Originally from Toronto</p>
         </div>
       </div>
 
-      <div class="space-y-4 text-[15px] text-text-muted leading-relaxed">
+      <!-- About Me -->
+      <div class="space-y-4 text-base text-text-muted leading-relaxed">
         <p>
           I'm a Software Engineer at <strong class="text-text">Microsoft</strong> and ex-cofounder of <a href="https://www.sellstatic.com" target="_blank" rel="noopener noreferrer" class="text-text underline decoration-border underline-offset-3 hover:decoration-text-muted transition-colors">SellStatic AI</a>. I currently live in Seattle, Washington, but I'm originally from Toronto!
         </p>
@@ -35,65 +36,71 @@ const description = "Software Engineer at Microsoft. Open-source contributor to 
         <p>
           I studied at <strong class="text-text">McMaster University</strong> and obtained a dual major - one in Biomedical Engineering and one in Software Engineering.
         </p>
+      </div>
 
-        <p>
-          Outside of work, I try to live my life to the fullest. I enjoy optimizing things like my health, sleep, and fun-time routines. The gym is my escape - I don't try to bodybuild, but for the amount of time I spend in there, one would think I do!
-        </p>
+      <!-- Beyond Work -->
+      <div class="mt-10">
+        <h2 class="text-lg font-semibold mb-4">Beyond Work</h2>
+        <div class="space-y-4 text-base text-text-muted leading-relaxed">
+          <p>
+            Outside of work, I try to live my life to the fullest. I enjoy optimizing things like my health, sleep, and fun-time routines. The gym is my escape - I don't try to bodybuild, but for the amount of time I spend in there, one would think I do!
+          </p>
 
-        <p>
-          I enjoy eating - like, I seriously cannot live without eating (well, neither can anybody else 😂). My record for sushi is 72 pieces in one sitting. Yup, you read that right. Don't get me started on desserts - I'll eat anything, but my favourites would be baked goods like cinnamon rolls, brownies, and donuts. The sheer amount of donuts I eat, one would think I was a cop in my old life. I can't forget my traditional Indian sweets either: barfi, kalakand, and modaks are just my usual nighttime victims. Sorry about rambling, I really love food.
-        </p>
+          <p>
+            I enjoy eating - like, I seriously cannot live without eating (well, neither can anybody else 😂). My record for sushi is 72 pieces in one sitting. Yup, you read that right. Don't get me started on desserts - I'll eat anything, but my favourites would be baked goods like cinnamon rolls, brownies, and donuts. The sheer amount of donuts I eat, one would think I was a cop in my old life. I can't forget my traditional Indian sweets either: barfi, kalakand, and modaks are just my usual nighttime victims. Sorry about rambling, I really love food.
+          </p>
 
-        <p>
-          If anybody would like to chat or try to beat me in a sushi eating competition, feel free to <a href="/contact/" class="text-text underline decoration-border underline-offset-3 hover:decoration-text-muted transition-colors">reach out</a> anytime!
-        </p>
+          <p>
+            If anybody would like to chat or try to beat me in a sushi eating competition, feel free to <a href="/contact/" class="text-text underline decoration-border underline-offset-3 hover:decoration-text-muted transition-colors">reach out</a> anytime!
+          </p>
+        </div>
       </div>
 
       <!-- Photo gallery -->
-      <div class="flex items-center gap-4 mt-8">
-        <img src="/aditya-garden.jpg" alt="Aditya in a garden" class="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover object-top border border-border-subtle shadow-sm" />
-        <img src="/aditya-jacket.jpg" alt="Aditya in a leather jacket" class="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover object-top border border-border-subtle shadow-sm" />
-        <img src="/mcmaster.png" alt="McMaster University" class="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border border-border-subtle shadow-sm" />
+      <div class="flex items-center gap-4 mt-10">
+        <img src="/aditya-garden.jpg" alt="Aditya in a garden" class="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover object-top border border-border-subtle shadow-sm" />
+        <img src="/aditya-jacket.jpg" alt="Aditya in a leather jacket" class="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover object-top border border-border-subtle shadow-sm" />
+        <img src="/mcmaster.png" alt="McMaster University" class="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border border-border-subtle shadow-sm" />
       </div>
     </section>
 
     <!-- Right column: Quick Links -->
     <aside class="lg:sticky lg:top-20 lg:self-start space-y-3">
-      <p class="text-xs font-medium text-text-faint uppercase tracking-wider mb-2">Quick Links</p>
-      <a href="/experience/" class="group flex items-center justify-between p-3 rounded-lg border border-border-subtle hover:border-border hover:bg-surface transition-all">
+      <p class="text-xs font-medium text-text-faint uppercase tracking-wider mb-3">Quick Links</p>
+      <a href="/experience/" class="group flex items-center justify-between p-4 rounded-lg border border-border-subtle hover:border-border hover:bg-surface transition-all">
         <div>
-          <p class="text-sm font-medium">Experience</p>
-          <p class="text-[11px] text-text-faint mt-0.5">Microsoft, GitHub, SellStatic</p>
+          <p class="text-base font-medium">Experience</p>
+          <p class="text-xs text-text-faint mt-0.5">Microsoft, GitHub, SellStatic</p>
         </div>
-        <span class="text-text-faint group-hover:text-text-muted transition-colors">→</span>
+        <span class="text-text-faint group-hover:text-text-muted transition-colors text-lg">→</span>
       </a>
-      <a href="/resume/" class="group flex items-center justify-between p-3 rounded-lg border border-border-subtle hover:border-border hover:bg-surface transition-all">
+      <a href="/resume/" class="group flex items-center justify-between p-4 rounded-lg border border-border-subtle hover:border-border hover:bg-surface transition-all">
         <div>
-          <p class="text-sm font-medium">Resume</p>
-          <p class="text-[11px] text-text-faint mt-0.5">Download or view</p>
+          <p class="text-base font-medium">Resume</p>
+          <p class="text-xs text-text-faint mt-0.5">Download or view</p>
         </div>
-        <span class="text-text-faint group-hover:text-text-muted transition-colors">→</span>
+        <span class="text-text-faint group-hover:text-text-muted transition-colors text-lg">→</span>
       </a>
-      <a href="/contact/" class="group flex items-center justify-between p-3 rounded-lg border border-border-subtle hover:border-border hover:bg-surface transition-all">
+      <a href="/contact/" class="group flex items-center justify-between p-4 rounded-lg border border-border-subtle hover:border-border hover:bg-surface transition-all">
         <div>
-          <p class="text-sm font-medium">Contact</p>
-          <p class="text-[11px] text-text-faint mt-0.5">Get in touch</p>
+          <p class="text-base font-medium">Contact</p>
+          <p class="text-xs text-text-faint mt-0.5">Get in touch</p>
         </div>
-        <span class="text-text-faint group-hover:text-text-muted transition-colors">→</span>
+        <span class="text-text-faint group-hover:text-text-muted transition-colors text-lg">→</span>
       </a>
-      <a href="https://www.linkedin.com/in/adityasharma6/" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-3 rounded-lg border border-border-subtle hover:border-border hover:bg-surface transition-all">
+      <a href="https://www.linkedin.com/in/adityasharma6/" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-4 rounded-lg border border-border-subtle hover:border-border hover:bg-surface transition-all">
         <div>
-          <p class="text-sm font-medium">LinkedIn</p>
-          <p class="text-[11px] text-text-faint mt-0.5">Connect with me</p>
+          <p class="text-base font-medium">LinkedIn</p>
+          <p class="text-xs text-text-faint mt-0.5">Connect with me</p>
         </div>
-        <span class="text-text-faint group-hover:text-text-muted transition-colors">↗</span>
+        <span class="text-text-faint group-hover:text-text-muted transition-colors text-lg">↗</span>
       </a>
-      <a href="https://github.com/AdityaSharma6" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-3 rounded-lg border border-border-subtle hover:border-border hover:bg-surface transition-all">
+      <a href="https://github.com/AdityaSharma6" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-4 rounded-lg border border-border-subtle hover:border-border hover:bg-surface transition-all">
         <div>
-          <p class="text-sm font-medium">GitHub</p>
-          <p class="text-[11px] text-text-faint mt-0.5">See my code</p>
+          <p class="text-base font-medium">GitHub</p>
+          <p class="text-xs text-text-faint mt-0.5">See my code</p>
         </div>
-        <span class="text-text-faint group-hover:text-text-muted transition-colors">↗</span>
+        <span class="text-text-faint group-hover:text-text-muted transition-colors text-lg">↗</span>
       </a>
     </aside>
   </div>
