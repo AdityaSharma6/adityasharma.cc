@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/global.css';
 
-const title = "Experience — Aditya Sharma | Software Engineer";
+const title = "Experience — Aditya Sharma";
 const description = "Detailed work experience: Microsoft, GitHub Copilot CLI, SellStatic, McMaster University. Every role, every accomplishment.";
 
 const experience = [
@@ -11,10 +11,14 @@ const experience = [
     role: "Software Engineer, Copilot CLI",
     period: "Jun 2026 – Present",
     location: "Seattle, WA",
-    type: "Dual-Access Employee",
+    badge: "Dual-Access Employee (Weekends)",
+    tech: ["TypeScript", "Rust", "Slack", "GitHub"],
+    links: [
+      { label: "GitHub Copilot CLI", href: "https://github.com/github/copilot-cli" },
+    ],
     bullets: [
       "Selected to contribute open source to GitHub Copilot CLI as a Microsoft Dual-Access Employee",
-      "Contributing to developer tooling used by millions of developers worldwide",
+      "Contributing on weekends to developer tooling used by millions of developers worldwide",
     ],
   },
   {
@@ -22,6 +26,10 @@ const experience = [
     role: "Software Engineer, AI & Infrastructure",
     period: "Aug 2025 – Present",
     location: "Seattle, WA",
+    tech: ["C#", ".NET Core", "ServiceFabric", "Azure", "CosmosDB", "PubSub", "TypeScript", "React", "M365 Agents SDK"],
+    links: [
+      { label: "M365 Agents SDK", href: "https://github.com/microsoft/agents" },
+    ],
     bullets: [
       "Developed an agent eval framework that reduced error diagnosis time by 4x per test, adopted by 5 business teams, caught 3 P0 bugs",
       "Created an internal testing agent running as a standalone validation service with 99.99% uptime",
@@ -34,6 +42,12 @@ const experience = [
     role: "Software Engineer, Full-Stack",
     period: "Aug 2022 – Aug 2025",
     location: "Seattle, WA",
+    tech: ["C#", ".NET Core", "ServiceFabric", "Azure", "CosmosDB", "PubSub", "TypeScript", "React", "M365 Agents SDK"],
+    links: [
+      { label: "Microsoft Graph Chat API", href: "https://learn.microsoft.com/en-us/graph/api/resources/chat?view=graph-rest-1.0" },
+      { label: "Teams Chat Message API", href: "https://learn.microsoft.com/en-us/graph/api/chatmessage-get?view=graph-rest-1.0" },
+      { label: "Teams Push Notifications", href: "https://learn.microsoft.com/en-us/graph/teams-changenotifications-chatmessage" },
+    ],
     bullets: [
       "Led front-end engineering for Slack-to-Teams migration: shipped 80% of features, 16M+ messages migrated, 100K+ enterprise tenants, $324M+ ARR pipeline",
       "Built push notification system: <1s latency, 1M+ daily events, 30K+ peak surges, 10K+ monthly developers using public docs",
@@ -46,6 +60,10 @@ const experience = [
     role: "Co-Founder & AI Engineer",
     period: "Dec 2022 – Jan 2026",
     location: "Toronto, ON (Side Venture)",
+    tech: ["Python", "React", "TypeScript", "C#", "Flask", "Django", "LangChain", "LangGraph"],
+    links: [
+      { label: "SellStatic", href: "https://sellstatic.com" },
+    ],
     bullets: [
       "Grew to $1K+ MRR, 1.2K-user waitlist, 75 customer interviews, 14-person team, 5 GenAI features shipped",
       "Improved retention by 37%, reduced COGS by 43% with in-house AI media editor",
@@ -67,81 +85,109 @@ const education = {
 
 const techStack = {
   "Languages": "Python, C#, Java, TypeScript, JavaScript, Go, C/C++, SQL, HTML/CSS, Bash",
-  "Frameworks": "React, .NET, Flask, Django, FastAPI, Node.js, Express, LangChain, LangGraph, M365 Agents SDK",
-  "Cloud & Infra": "Azure (Functions, DevOps, App Service, Entra), AWS, GCP, Docker, Kubernetes",
-  "Data": "Cosmos DB, PostgreSQL, Redis, MongoDB, Azure Data Explorer (Kusto/KQL)",
+  "Frameworks": "React, .NET Core, Flask, Django, FastAPI, Node.js, Express, LangChain, LangGraph, M365 Agents SDK",
+  "Cloud & Infra": "Azure (Functions, DevOps, App Service, Entra, ServiceFabric), AWS, GCP, Docker, Kubernetes",
+  "Data": "Cosmos DB, PostgreSQL, Redis, MongoDB, Azure Data Explorer (Kusto/KQL), PubSub",
   "Tools": "Git, CI/CD, Terraform, Grafana, Geneva Monitoring",
 };
 ---
 
 <BaseLayout title={title} description={description}>
-  <section class="py-8">
-    <div class="flex items-center justify-between mb-8">
-      <div>
-        <h1 class="text-3xl font-bold">Experience</h1>
-        <p class="text-text-muted mt-1">Everything I've built, every role I've held.</p>
-      </div>
-      <a
-        href="/AdityaSharma_Resume.pdf"
-        download
-        class="hidden sm:inline-flex items-center px-4 py-2 bg-brand text-white text-sm font-medium rounded-lg hover:bg-brand-dark transition-colors"
-      >
-        Download PDF
-      </a>
-    </div>
+  <section class="animate-in">
+    <p class="text-xs font-mono text-text-faint uppercase tracking-widest mb-4">Experience</p>
+    <h1 class="text-2xl font-bold mb-2">Everything I've built.</h1>
+    <p class="text-sm text-text-muted mb-4">Every role, every accomplishment — across my entire career.</p>
+    <a
+      href="/AdityaSharma_Resume.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-block text-xs text-text-muted underline decoration-border underline-offset-4 hover:decoration-text-muted hover:text-text transition-all"
+    >
+      Download PDF resume ↗
+    </a>
+  </section>
 
-    <!-- Work Experience -->
-    <div class="space-y-10">
-      {experience.map((job) => (
-        <article class="relative pl-6 border-l-2 border-border">
-          <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-brand border-2 border-white"></div>
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
-            <h2 class="text-lg font-semibold">{job.company} — {job.role}</h2>
-            {job.type && <span class="text-xs px-2 py-0.5 bg-blue-50 text-brand rounded-full font-medium">{job.type}</span>}
-          </div>
-          <p class="text-sm text-text-muted mb-3">{job.period} · {job.location}</p>
-          <ul class="space-y-2">
-            {job.bullets.map((b) => (
-              <li class="text-sm text-text/80 leading-relaxed flex">
-                <span class="text-brand mr-2 mt-1 shrink-0">•</span>
-                <span>{b}</span>
-              </li>
+  <!-- Work Experience -->
+  <div class="mt-14 space-y-14">
+    {experience.map((job) => (
+      <article class="group">
+        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-1">
+          <h2 class="text-base font-semibold">{job.company} <span class="font-normal text-text-muted">— {job.role}</span></h2>
+        </div>
+        <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mb-3">
+          <p class="text-xs text-text-faint">{job.period} · {job.location}</p>
+          {job.badge && (
+            <span class="text-[10px] px-2 py-0.5 bg-surface border border-border-subtle rounded-full text-text-muted font-medium">
+              {job.badge}
+            </span>
+          )}
+        </div>
+
+        {/* Links to actual work */}
+        {job.links && job.links.length > 0 && (
+          <div class="flex flex-wrap gap-x-4 gap-y-1 mb-3">
+            {job.links.map((link) => (
+              <a
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-xs text-accent hover:text-accent-muted underline underline-offset-2 transition-colors"
+              >
+                {link.label} ↗
+              </a>
             ))}
-          </ul>
-        </article>
-      ))}
-    </div>
+          </div>
+        )}
 
-    <!-- Education -->
-    <div class="mt-16 pt-12 border-t border-border">
-      <h2 class="text-2xl font-semibold mb-6">Education</h2>
-      <article class="relative pl-6 border-l-2 border-border">
-        <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-brand border-2 border-white"></div>
-        <h3 class="text-lg font-semibold">{education.school}</h3>
-        <p class="text-sm text-text-muted">{education.degree} · GPA: {education.gpa}</p>
-        <p class="text-sm text-text-muted mb-3">{education.period}</p>
-        <ul class="space-y-2">
-          {education.details.map((d) => (
-            <li class="text-sm text-text/80 leading-relaxed flex">
-              <span class="text-brand mr-2 mt-1 shrink-0">•</span>
-              <span>{d}</span>
+        <ul class="space-y-2 mb-4">
+          {job.bullets.map((b) => (
+            <li class="text-sm text-text-muted leading-relaxed pl-4 relative before:content-['–'] before:absolute before:left-0 before:text-text-faint">
+              {b}
             </li>
           ))}
         </ul>
-      </article>
-    </div>
 
-    <!-- Tech Stack -->
-    <div class="mt-16 pt-12 border-t border-border">
-      <h2 class="text-2xl font-semibold mb-6">Technical Skills</h2>
-      <div class="space-y-4">
-        {Object.entries(techStack).map(([category, skills]) => (
-          <div>
-            <h3 class="text-sm font-semibold text-text mb-1">{category}</h3>
-            <p class="text-sm text-text-muted">{skills}</p>
-          </div>
+        {/* Tech stack tags */}
+        <div class="flex flex-wrap gap-1.5">
+          {job.tech.map((t) => (
+            <span class="text-[10px] px-2 py-0.5 bg-surface border border-border-subtle rounded text-text-faint font-mono">
+              {t}
+            </span>
+          ))}
+        </div>
+      </article>
+    ))}
+  </div>
+
+  <!-- Education -->
+  <hr class="my-14 border-border-subtle" />
+  <section>
+    <p class="text-xs font-mono text-text-faint uppercase tracking-widest mb-6">Education</p>
+    <article>
+      <h2 class="text-base font-semibold">{education.school}</h2>
+      <p class="text-sm text-text-muted">{education.degree} · GPA: {education.gpa}</p>
+      <p class="text-xs text-text-faint mt-0.5 mb-3">{education.period}</p>
+      <ul class="space-y-1.5">
+        {education.details.map((d) => (
+          <li class="text-sm text-text-muted leading-relaxed pl-4 relative before:content-['–'] before:absolute before:left-0 before:text-text-faint">
+            {d}
+          </li>
         ))}
-      </div>
+      </ul>
+    </article>
+  </section>
+
+  <!-- Tech Stack -->
+  <hr class="my-14 border-border-subtle" />
+  <section>
+    <p class="text-xs font-mono text-text-faint uppercase tracking-widest mb-6">Technical Skills</p>
+    <div class="space-y-4">
+      {Object.entries(techStack).map(([category, skills]) => (
+        <div>
+          <h3 class="text-xs font-semibold text-text uppercase tracking-wide mb-1">{category}</h3>
+          <p class="text-sm text-text-muted">{skills}</p>
+        </div>
+      ))}
     </div>
   </section>
 </BaseLayout>

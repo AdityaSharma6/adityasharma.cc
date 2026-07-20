@@ -18,30 +18,26 @@ const navLinks = [
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- SEO -->
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical || `${site}${currentPath}`} />
 
-    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={`${site}${currentPath}`} />
     <meta property="og:site_name" content="Aditya Sharma" />
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
 
-    <!-- Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Person",
@@ -69,27 +65,31 @@ const navLinks = [
       "email": "aditya_sharma_@hotmail.com"
     })} />
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   </head>
-  <body class="bg-white text-text font-sans antialiased">
+  <body class="bg-white text-text font-sans antialiased min-h-screen flex flex-col">
+    <!-- Dev Banner -->
+    <div class="bg-brand text-white text-center text-xs py-1.5 font-medium tracking-wide">
+      🚧 This site is currently in development
+    </div>
+
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-border">
-      <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="/" class="text-lg font-semibold text-text hover:text-brand transition-colors">
-          Aditya Sharma
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-lg border-b border-border-subtle">
+      <div class="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
+        <a href="/" class="text-sm font-semibold tracking-tight hover:opacity-70 transition-opacity">
+          AS
         </a>
-        <div class="flex items-center gap-6">
+        <div class="flex items-center gap-1">
           {navLinks.map((link) => (
             <a
               href={link.href}
               class:list={[
-                "text-sm transition-colors",
+                "px-3 py-1.5 text-sm rounded-md transition-all",
                 currentPath === link.href
-                  ? "text-brand font-medium"
-                  : "text-text-muted hover:text-text"
+                  ? "bg-surface text-text font-medium"
+                  : "text-text-muted hover:text-text hover:bg-surface"
               ]}
             >
               {link.label}
@@ -100,18 +100,18 @@ const navLinks = [
     </nav>
 
     <!-- Main Content -->
-    <main class="max-w-4xl mx-auto px-6 py-12">
+    <main class="flex-1 max-w-3xl mx-auto w-full px-6 py-16">
       <slot />
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-border mt-16">
-      <div class="max-w-4xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-text-muted">
-        <p>&copy; {new Date().getFullYear()} Aditya Sharma. All rights reserved.</p>
+    <footer class="border-t border-border-subtle">
+      <div class="max-w-3xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-text-faint">
+        <p>&copy; {new Date().getFullYear()} Aditya Sharma</p>
         <div class="flex items-center gap-4">
-          <a href="https://www.linkedin.com/in/adityasharma6/" target="_blank" rel="noopener noreferrer" class="hover:text-text transition-colors">LinkedIn</a>
-          <a href="https://github.com/AdityaSharma6" target="_blank" rel="noopener noreferrer" class="hover:text-text transition-colors">GitHub</a>
-          <a href="mailto:aditya_sharma_@hotmail.com" class="hover:text-text transition-colors">Email</a>
+          <a href="https://www.linkedin.com/in/adityasharma6/" target="_blank" rel="noopener noreferrer" class="hover:text-text-muted transition-colors">LinkedIn</a>
+          <a href="https://github.com/AdityaSharma6" target="_blank" rel="noopener noreferrer" class="hover:text-text-muted transition-colors">GitHub</a>
+          <a href="mailto:aditya_sharma_@hotmail.com" class="hover:text-text-muted transition-colors">Email</a>
         </div>
       </div>
     </footer>
