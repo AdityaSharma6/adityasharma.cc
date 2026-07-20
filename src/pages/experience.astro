@@ -9,7 +9,19 @@ const description = "Detailed work experience with links to shipped work. Micros
 <BaseLayout title={title} description={description}>
   <section class="animate-in">
     <h1 class="text-2xl font-semibold tracking-tight mb-2">Experience</h1>
-    <p class="text-sm text-text-muted mb-2">Everything I've built — with links to the actual work.</p>
+    <p class="text-sm text-text-muted mb-4">Everything I've built - with links to the actual work.</p>
+
+    <!-- Company logo strip -->
+    <div class="flex items-center gap-4 flex-wrap mb-4">
+      <img src="/logos/github.svg" alt="GitHub" class="w-8 h-8" />
+      <img src="/logos/microsoft.svg" alt="Microsoft" class="w-8 h-8" />
+      <img src="/logos/sellstatic.png" alt="SellStatic" class="w-8 h-8 object-contain" />
+      <img src="/logos/cibc.svg" alt="CIBC" class="w-8 h-8" />
+      <img src="/logos/loblaws.svg" alt="Loblaw" class="w-8 h-8" />
+      <img src="/logos/kinaxis.svg" alt="Kinaxis" class="w-8 h-8" />
+      <img src="/logos/konrad.svg" alt="Konrad Group" class="w-8 h-8" />
+    </div>
+
     <a
       href="/AdityaSharma_Resume.pdf"
       target="_blank"
@@ -22,10 +34,13 @@ const description = "Detailed work experience with links to shipped work. Micros
 
   <!-- GitHub -->
   <section class="mt-14">
-    <div class="mb-1">
-      <h2 class="text-base font-semibold">GitHub</h2>
-      <p class="text-sm text-text-muted">Software Engineer, Copilot CLI</p>
-      <p class="text-xs text-text-faint mt-0.5">Jun 2026 – Present · Seattle, WA · <span class="italic">Dual-Access Employee (Weekends)</span></p>
+    <div class="mb-1 flex items-start gap-3">
+      <img src="/logos/github.svg" alt="GitHub" class="w-10 h-10 shrink-0 mt-0.5" />
+      <div>
+        <h2 class="text-base font-semibold">GitHub</h2>
+        <p class="text-sm text-text-muted">Software Engineer, Copilot CLI</p>
+        <p class="text-xs text-text-faint mt-0.5">Jun 2026 – Present · Seattle, WA · <span class="italic">Dual-Access Employee (Weekends)</span></p>
+      </div>
     </div>
     <ul class="mt-4 space-y-3">
       <li class="text-[15px] text-text-muted leading-relaxed">
@@ -43,10 +58,13 @@ const description = "Detailed work experience with links to shipped work. Micros
 
   <!-- Microsoft AI & Infra -->
   <section>
-    <div class="mb-1">
-      <h2 class="text-base font-semibold">Microsoft</h2>
-      <p class="text-sm text-text-muted">Software Engineer, AI & Infrastructure</p>
-      <p class="text-xs text-text-faint mt-0.5">Aug 2025 – Present · Seattle, WA</p>
+    <div class="mb-1 flex items-start gap-3">
+      <img src="/logos/microsoft.svg" alt="Microsoft" class="w-10 h-10 shrink-0 mt-0.5" />
+      <div>
+        <h2 class="text-base font-semibold">Microsoft</h2>
+        <p class="text-sm text-text-muted">Software Engineer, AI & Infrastructure</p>
+        <p class="text-xs text-text-faint mt-0.5">Aug 2025 – Present · Seattle, WA</p>
+      </div>
     </div>
     <ul class="mt-4 space-y-3">
       <li class="text-[15px] text-text-muted leading-relaxed">
@@ -76,10 +94,13 @@ const description = "Detailed work experience with links to shipped work. Micros
 
   <!-- Microsoft Full-Stack -->
   <section>
-    <div class="mb-1">
-      <h2 class="text-base font-semibold">Microsoft</h2>
-      <p class="text-sm text-text-muted">Software Engineer, Full-Stack</p>
-      <p class="text-xs text-text-faint mt-0.5">Aug 2022 – Aug 2025 · Seattle, WA</p>
+    <div class="mb-1 flex items-start gap-3">
+      <img src="/logos/microsoft.svg" alt="Microsoft" class="w-10 h-10 shrink-0 mt-0.5" />
+      <div>
+        <h2 class="text-base font-semibold">Microsoft</h2>
+        <p class="text-sm text-text-muted">Software Engineer, Full-Stack</p>
+        <p class="text-xs text-text-faint mt-0.5">Aug 2022 – Aug 2025 · Seattle, WA</p>
+      </div>
     </div>
     <ul class="mt-4 space-y-3">
       <li class="text-[15px] text-text-muted leading-relaxed">
@@ -111,10 +132,13 @@ const description = "Detailed work experience with links to shipped work. Micros
 
   <!-- SellStatic -->
   <section>
-    <div class="mb-1">
-      <h2 class="text-base font-semibold">SellStatic</h2>
-      <p class="text-sm text-text-muted">Co-Founder & AI Engineer, Side Venture</p>
-      <p class="text-xs text-text-faint mt-0.5">Dec 2022 – Jan 2026 · Toronto, ON</p>
+    <div class="mb-1 flex items-start gap-3">
+      <img src="/logos/sellstatic.png" alt="SellStatic" class="w-10 h-10 shrink-0 mt-0.5 object-contain" />
+      <div>
+        <h2 class="text-base font-semibold">SellStatic</h2>
+        <p class="text-sm text-text-muted">Co-Founder & AI Engineer, Side Venture</p>
+        <p class="text-xs text-text-faint mt-0.5">Dec 2022 – Jan 2026 · Toronto, ON</p>
+      </div>
     </div>
     <ul class="mt-4 space-y-3">
       <li class="text-[15px] text-text-muted leading-relaxed">
@@ -146,10 +170,13 @@ const description = "Detailed work experience with links to shipped work. Micros
 
   <!-- Education -->
   <section>
-    <div class="mb-1">
-      <h2 class="text-base font-semibold">McMaster University</h2>
-      <p class="text-sm text-text-muted">B.Eng in Software & Biomedical Engineering · GPA: 3.7/4.0</p>
-      <p class="text-xs text-text-faint mt-0.5">Sep 2018 – May 2022</p>
+    <div class="mb-1 flex items-start gap-3">
+      <img src="/mcmaster.png" alt="McMaster University" class="w-10 h-10 shrink-0 mt-0.5 rounded object-cover" />
+      <div>
+        <h2 class="text-base font-semibold">McMaster University</h2>
+        <p class="text-sm text-text-muted">B.Eng in Software & Biomedical Engineering · GPA: 3.7/4.0</p>
+        <p class="text-xs text-text-faint mt-0.5">Sep 2018 – May 2022</p>
+      </div>
     </div>
     <ul class="mt-4 space-y-3">
       <li class="text-[15px] text-text-muted leading-relaxed">
