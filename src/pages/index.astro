@@ -3,131 +3,77 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/global.css';
 
 const title = "Aditya Sharma — Software Engineer";
-const description = "Software Engineer at Microsoft. Open-source contributor to GitHub Copilot CLI. I build scalable APIs, AI systems, and products.";
-
-const pillars = [
-  {
-    heading: "Frontend",
-    items: [
-      "Lead frontend engineering for the Slack-to-Teams Migration Tool",
-      "Conducted overhaul for SellStatic V2 — design, coding, release",
-    ],
-  },
-  {
-    heading: "Backend & Infrastructure",
-    items: [
-      "Create RESTful APIs that serve a minimum of 33M+ daily requests",
-      "Conduct schema designs and reviews of APIs",
-      "Optimize platform infrastructure",
-      "Develop scalable distributed systems",
-    ],
-  },
-  {
-    heading: "AI Engineering",
-    items: [
-      "Establish testing guidelines and procedures for APIs and Agents",
-      "Created image and GenAI features",
-      "Agent evaluation frameworks adopted by 5+ teams",
-      "RAG chatbots and production AI pipelines across 5 models",
-      "Build AI systems with guardrails, evaluation, and reliability",
-    ],
-  },
-  {
-    heading: "Product & Leadership",
-    items: [
-      "Lead a cross-functional team of 14 people",
-      "Co-founded a startup through 3 pivots to $1K+ MRR",
-      "Ran 75+ customer interviews",
-      "Ship products end-to-end — from customer discovery to deployed code",
-      "Created product specs: customer discovery, problems, solutions, metrics, requirements, NFRs, go-to-market strategy",
-    ],
-  },
-];
-
-const links = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/adityasharma6/" },
-  { label: "GitHub", href: "https://github.com/AdityaSharma6" },
-  { label: "Email", href: "mailto:aditya_sharma_@hotmail.com" },
-];
+const description = "Software Engineer at Microsoft. Open-source contributor to GitHub Copilot CLI. Ex Co-Founder of SellStatic AI.";
 ---
 
 <BaseLayout title={title} description={description}>
-  <!-- Hero -->
-  <section class="animate-in">
-    <p class="text-sm text-text-muted font-mono mb-4">Software Engineer</p>
-    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight leading-tight">
-      Aditya Sharma
-    </h1>
-    <p class="mt-4 text-base text-text-muted leading-relaxed max-w-xl">
-      Software Engineer at <strong class="text-text">Microsoft</strong>. Open-source contributor to 
-      <a href="https://github.com/github/copilot-cli" target="_blank" rel="noopener noreferrer" class="text-text underline decoration-text-faint underline-offset-2 hover:decoration-text transition-colors">GitHub Copilot CLI</a> 
-      as a Dual-Access Employee on weekends.
-    </p>
+  <section class="animate-in max-w-xl">
+    <h1 class="text-2xl font-semibold tracking-tight mb-6">Hey! I'm Aditya 👋</h1>
 
-    <div class="mt-8 flex flex-wrap gap-3">
-      <a href="/experience/" class="text-sm px-4 py-2 bg-brand text-white rounded-md hover:bg-brand-dark transition-colors">
-        View Experience →
-      </a>
-      <a href="/resume/" class="text-sm px-4 py-2 border border-border rounded-md hover:bg-surface transition-colors">
-        Resume
-      </a>
-    </div>
+    <div class="space-y-4 text-[15px] text-text-muted leading-relaxed">
+      <p>
+        I'm a Software Engineer at <strong class="text-text">Microsoft</strong> and ex-cofounder of 
+        <a href="https://www.sellstatic.com" target="_blank" rel="noopener noreferrer" class="text-text underline decoration-border underline-offset-3 hover:decoration-text-muted transition-colors">SellStatic AI</a>.
+        I currently live in Seattle, Washington, but I'm originally from Toronto!
+      </p>
 
-    <div class="mt-6 flex items-center gap-4">
-      {links.map((link) => (
-        <a
-          href={link.href}
-          target={link.href.startsWith('http') ? '_blank' : undefined}
-          rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-          class="text-xs text-text-faint hover:text-text-muted transition-colors"
-        >
-          {link.label}
-        </a>
-      ))}
-    </div>
-  </section>
+      <p>
+        At Microsoft, I've worked across backend, frontend, and infrastructure engineering. I'm also an open-source contributor to 
+        <a href="https://github.com/github/copilot-cli" target="_blank" rel="noopener noreferrer" class="text-text underline decoration-border underline-offset-3 hover:decoration-text-muted transition-colors">GitHub Copilot CLI</a> 
+        as a Dual-Access Employee on weekends. At SellStatic, in addition to wearing every engineering hat a startup requires, I was in a leadership position and led product management efforts.
+      </p>
 
-  <!-- Divider -->
-  <hr class="my-16 border-border-subtle" />
+      <p>
+        I studied at <strong class="text-text">McMaster University</strong> and obtained a dual major — one in Biomedical Engineering and one in Software Engineering.
+      </p>
 
-  <!-- What I Do -->
-  <section class="animate-in-delay">
-    <p class="text-xs font-mono text-text-faint uppercase tracking-widest mb-8">What I Do</p>
-    <p class="text-sm text-text-muted mb-10 max-w-xl">
-      These are cumulative across my entire career — Microsoft, GitHub, SellStatic, and internships.
-    </p>
+      <p>
+        Outside of work, I try to live my life to the fullest. I enjoy optimizing things like my health, sleep, and fun-time routines. The gym is my escape — I don't try to bodybuild, but for the amount of time I spend in there, one would think I do!
+      </p>
 
-    <div class="grid gap-10">
-      {pillars.map((p) => (
-        <div>
-          <h2 class="text-sm font-semibold mb-3">{p.heading}</h2>
-          <ul class="space-y-1.5">
-            {p.items.map((item) => (
-              <li class="text-sm text-text-muted leading-relaxed pl-4 relative before:content-['–'] before:absolute before:left-0 before:text-text-faint">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
+      <p>
+        I enjoy eating — like, I seriously cannot live without eating. My record for sushi is 72 pieces in one sitting. It would be amiss to say I don't have a sweet tooth either — donuts, brownies, cinnamon rolls, and traditional Indian sweets like barfi, kalakand, and modaks.
+      </p>
+
+      <p>
+        If anybody would like to chat or try to beat me in a sushi eating competition, feel free to 
+        <a href="/contact/" class="text-text underline decoration-border underline-offset-3 hover:decoration-text-muted transition-colors">reach out</a> anytime!
+      </p>
     </div>
   </section>
 
-  <!-- Divider -->
-  <hr class="my-16 border-border-subtle" />
+  <hr class="my-14 border-border-subtle" />
 
   <!-- Quick Links -->
-  <section>
-    <p class="text-xs font-mono text-text-faint uppercase tracking-widest mb-6">Elsewhere</p>
-    <div class="flex flex-wrap gap-x-6 gap-y-2">
-      <a href="https://www.linkedin.com/in/adityasharma6/" target="_blank" rel="noopener noreferrer" class="text-sm text-text-muted hover:text-text underline decoration-border-subtle underline-offset-4 hover:decoration-text-muted transition-all">
-        LinkedIn ↗
+  <section class="animate-in-delay">
+    <div class="grid sm:grid-cols-2 gap-3">
+      <a href="/experience/" class="group flex items-center justify-between p-4 rounded-lg border border-border-subtle hover:border-border hover:bg-surface transition-all">
+        <div>
+          <p class="text-sm font-medium">Experience</p>
+          <p class="text-xs text-text-faint mt-0.5">My work at Microsoft, GitHub, SellStatic</p>
+        </div>
+        <span class="text-text-faint group-hover:text-text-muted transition-colors">→</span>
       </a>
-      <a href="https://github.com/AdityaSharma6" target="_blank" rel="noopener noreferrer" class="text-sm text-text-muted hover:text-text underline decoration-border-subtle underline-offset-4 hover:decoration-text-muted transition-all">
-        GitHub ↗
+      <a href="/resume/" class="group flex items-center justify-between p-4 rounded-lg border border-border-subtle hover:border-border hover:bg-surface transition-all">
+        <div>
+          <p class="text-sm font-medium">Resume</p>
+          <p class="text-xs text-text-faint mt-0.5">Download or view my resume</p>
+        </div>
+        <span class="text-text-faint group-hover:text-text-muted transition-colors">→</span>
       </a>
-      <a href="mailto:aditya_sharma_@hotmail.com" class="text-sm text-text-muted hover:text-text underline decoration-border-subtle underline-offset-4 hover:decoration-text-muted transition-all">
-        aditya_sharma_@hotmail.com
+      <a href="https://www.linkedin.com/in/adityasharma6/" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-4 rounded-lg border border-border-subtle hover:border-border hover:bg-surface transition-all">
+        <div>
+          <p class="text-sm font-medium">LinkedIn</p>
+          <p class="text-xs text-text-faint mt-0.5">Connect with me</p>
+        </div>
+        <span class="text-text-faint group-hover:text-text-muted transition-colors">↗</span>
+      </a>
+      <a href="https://github.com/AdityaSharma6" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-4 rounded-lg border border-border-subtle hover:border-border hover:bg-surface transition-all">
+        <div>
+          <p class="text-sm font-medium">GitHub</p>
+          <p class="text-xs text-text-faint mt-0.5">See my code</p>
+        </div>
+        <span class="text-text-faint group-hover:text-text-muted transition-colors">↗</span>
       </a>
     </div>
   </section>
